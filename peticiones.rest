@@ -1,9 +1,10 @@
 ###
-
+GET http://localhost:3000/api/inmuebles/
 ###
-
+POST http://localhost:3000/api/inmuebles/
 ###
-
+PUT http://localhost:3000/api/inmuebles/:inmuebleID
 ###
+DELETE http://localhost:3000/api/inmuebles/:inmuebleID
 
 
