@@ -1,0 +1,22 @@
+{
+  "name": "actividad_8_api_mongodb",
+  "version": "1.0.0",
+  "description": "A través de esta actividad vamos a poder establecer los principios básicos de una arquitectura de aplicación compleja para una aplicación generada a partir del framework Express. Además, nos va a ayudar a entender cómo podemos trabajar con los diferentes métodos y acciones disponibles dentro de una base de datos generada a partir de MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
