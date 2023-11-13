@@ -6,20 +6,49 @@ const getInmuebles = async (req, res) => {
         console.log(inmuebles);
         res.json(inmuebles);
     } catch(error){
-        res.json({ error: error.message });
+        res.json({
+            error: error.message,
+            info: 'No ha sido posible listar los inmuebles' });
     }
 }
 
-const createInmueble = (req, res) => {
-    res.send('CREATE')
+const createInmueble = async (req, res) => {
+    try{
+        const result = await InmuebleModel.create(req.body);
+        res.json(result);
+    }catch(error){
+        res.json({
+            error: error.message,
+            info: 'No ha sido posible crear el inmueble' });
+    }
 }
 
-const updateInmueble = (req, res) => {
-    res.send('UPDATE')
+const updateInmueble = async (req, res) => {
+    const { inmuebleId } = req.params;
+    
+    try{
+        const result = await InmuebleModel.findByIdAndUpdate(inmuebleId, req.body, {new:true});
+        res.json(result);
+
+    }catch(error){
+        res.json({
+            error: error.message,
+            info: 'No ha sido posible editar el inmueble' });
+    }
 }
 
-const deleteInmueble = (req, res) => {
-    res.send('DELETE')
+const deleteInmueble = async (req, res) => {
+    const { inmuebleId } = req.params;
+    
+    try{
+        const result = await InmuebleModel.findByIdAndDelete(inmuebleId);
+        res.json(result);
+
+    }catch(error){
+        res.json({
+            error: error.message,
+            info: 'No ha sido posible borrar el inmueble' });
+    }
 }
 
 module.exports = {

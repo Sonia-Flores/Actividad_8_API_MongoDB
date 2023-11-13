@@ -5,8 +5,8 @@ const InmuebleController = require('../../controllers/inmueble.controler');
 
 router.get('/', InmuebleController.getInmuebles);
 router.post('/',InmuebleController.createInmueble);
-router.put('/:inmuebletId', InmuebleController.updateInmueble );
-router.delete('/:inmuebletId', InmuebleController.deleteInmueble);
+router.put('/:inmuebleId', InmuebleController.updateInmueble );
+router.delete('/:inmuebleId', InmuebleController.deleteInmueble);
 
 
 module.exports = router;
