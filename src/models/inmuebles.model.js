@@ -15,4 +15,4 @@ const inmuebleSchema = new Schema({
 });
 
 
-module.exports = model('product', inmuebleSchema);
+module.exports = model('inmueble', inmuebleSchema);

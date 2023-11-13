@@ -1,7 +1,13 @@
 const InmuebleModel = require('../models/inmuebles.model');
 
-const getInmuebles = (req, res) => {
-    res.send('GET')
+const getInmuebles = async (req, res) => {
+    try{
+        const inmuebles = await InmuebleModel.find();
+        console.log(inmuebles);
+        res.json(inmuebles);
+    } catch(error){
+        res.json({ error: error.message });
+    }
 }
 
 const createInmueble = (req, res) => {
